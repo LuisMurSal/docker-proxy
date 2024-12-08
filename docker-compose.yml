@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "80:80"
+      - "5000:5000"
+    volumes:
+      - ./flask_app:/app
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
